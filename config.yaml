@@ -1,0 +1,29 @@
+data:
+  max_recipe_length: 1024
+  max_ingredients: 30
+  flavor_dim: 512
+  molecular_dim: 256
+
+generative_models:
+  recipe_generator:
+    model_name: "gpt2"
+    max_length: 1024
+    temperature: 0.8
+    top_p: 0.9
+  flavor_predictor:
+    hidden_dim: 512
+    num_layers: 4
+
+food_science:
+  flavor_threshold: 0.7
+  pairing_threshold: 0.6
+  nutrition_calories_per_gram: 4.0
+
+multi_modal:
+  image_size: [224, 224]
+  embedding_dim: 768
+  fusion_dim: 512
+
+api:
+  host: "0.0.0.0"
+  port: 8000
